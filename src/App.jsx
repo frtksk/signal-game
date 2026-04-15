@@ -569,18 +569,30 @@ function IntroScreen({onNext}){
   const [revealed, setRevealed] = useState(false);
   return (
     <div
-      style={{...s.card,paddingTop:100,paddingBottom:100,cursor:"pointer"}}
+      style={{...s.card,padding:"0 20px",cursor:"pointer",position:"relative",minHeight:560}}
       onClick={()=>{ if(!revealed) setRevealed(true); }}
     >
-      <div style={{animation:"fadeIn 1.2s ease"}}>
-        <div style={{...s.signalSymbol,marginTop:40,marginBottom:48}}>◈</div>
-        <h1 style={{...s.title,margin:"0 0 60px"}}>SIGNAL</h1>
+      {/* 記号とタイトル */}
+      <div style={{
+        position:"absolute",
+        left:0,right:0,
+        top: revealed?"8%":"28%",
+        textAlign:"center",
+        transition:"top 1.8s cubic-bezier(.25,.1,.25,1)",
+        animation:"fadeIn 1.4s ease",
+      }}>
+        <div style={{...s.signalSymbol,marginBottom:20,marginTop:0}}>◈</div>
+        <h1 style={{...s.title,margin:0}}>SIGNAL</h1>
       </div>
 
+      {/* 説明とボタン */}
       <div style={{
+        position:"absolute",
+        left:"20px",right:"20px",
+        bottom:"28px",
         opacity: revealed?1:0,
-        transform: revealed?"translateY(0)":"translateY(16px)",
-        transition:"opacity 1.2s ease, transform 1.2s ease",
+        transform: revealed?"translateY(0)":"translateY(20px)",
+        transition:"opacity 1.2s ease .5s, transform 1.4s cubic-bezier(.25,.1,.25,1) .3s",
         pointerEvents: revealed?"auto":"none",
       }}>
         <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
