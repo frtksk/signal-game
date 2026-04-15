@@ -14,13 +14,13 @@ const ALL_DECISIONS = [
 
 // ===== ROLES =====
 const ROLES = [
-  { id:"scientist",  name:"科学者",  icon:"⚗️",  filter:"論理と証拠で読む。感情は排除する。",                   allowed:["respond","silence","decode","mimic","warn"],          forbidden:["welcome","ignore","destroy"],      forbiddenReason:"感情的・非論理的な選択は取れない" },
-  { id:"politician", name:"政治家",  icon:"🏛️",  filter:"脅威か、利益か。人類の安全を最優先に考える。",         allowed:["silence","warn","ignore","respond","welcome","destroy"],forbidden:["decode","mimic"],                  forbiddenReason:"意味不明な行動は政治的リスクが高すぎる" },
-  { id:"poet",       name:"詩人",    icon:"🪶",   filter:"感情と美しさで読む。言葉の裏にある意志を感じる。",     allowed:["respond","decode","welcome","silence","mimic"],        forbidden:["destroy","warn","ignore"],         forbiddenReason:"美しい可能性を封じることはできない" },
-  { id:"soldier",    name:"軍人",    icon:"⚔️",   filter:"敵か味方か。行動パターンに脅威の兆候を探す。",         allowed:["silence","warn","destroy","ignore","respond"],         forbidden:["welcome","decode","mimic"],        forbiddenReason:"未確認の脅威に友好的な態度は取れない" },
-  { id:"child",      name:"子ども",  icon:"🌱",   filter:"純粋に問う。「なぜ」を繰り返す。大人が見落とすものを見る。", allowed:["respond","welcome","decode","mimic","ignore"],    forbidden:["destroy","warn","silence"],        forbiddenReason:"怖がって隠したり壊したりするのは嫌だ" },
-  { id:"philosopher",name:"哲学者",  icon:"🔭",   filter:"存在の意味を問う。なぜ彼らは発信したのかを考える。",   allowed:["decode","silence","respond","ignore","welcome"],       forbidden:["destroy","warn","mimic"],          forbiddenReason:"軽率な行動は存在への冒涜になる" },
-  { id:"doctor",     name:"医師",    icon:"🩺",   filter:"生命の観点で読む。これは苦しみのサインか、それとも健康の証か。", allowed:["respond","welcome","decode","silence","warn"], forbidden:["destroy","mimic","ignore"],        forbiddenReason:"生命の可能性を遮断・無視することはできない" },
+  { id:"scientist",  name:"科学者",  icon:"⚗️",  filter:"論理と証拠で読む。感情は排除する。",       allowed:["respond","silence","decode","mimic","warn"],          forbidden:["welcome","ignore","destroy"],      forbiddenReason:"感情的・非論理的な選択は取れない" },
+  { id:"politician", name:"政治家",  icon:"🏛️",  filter:"脅威か利益か。人類の安全を最優先に。",     allowed:["silence","warn","ignore","respond","welcome","destroy"],forbidden:["decode","mimic"],                  forbiddenReason:"意味不明な行動は政治的リスクが高すぎる" },
+  { id:"poet",       name:"詩人",    icon:"🪶",   filter:"感情と美しさで読む。意志を言葉の裏に感じる。", allowed:["respond","decode","welcome","silence","mimic"],      forbidden:["destroy","warn","ignore"],         forbiddenReason:"美しい可能性を封じることはできない" },
+  { id:"soldier",    name:"軍人",    icon:"⚔️",   filter:"敵か味方か。脅威の兆候を探す。",           allowed:["silence","warn","destroy","ignore","respond"],         forbidden:["welcome","decode","mimic"],        forbiddenReason:"未確認の脅威に友好的な態度は取れない" },
+  { id:"child",      name:"子ども",  icon:"🌱",   filter:"純粋に問う。大人が見落とすものを見る。",   allowed:["respond","welcome","decode","mimic","ignore"],         forbidden:["destroy","warn","silence"],        forbiddenReason:"怖がって隠したり壊したりするのは嫌だ" },
+  { id:"philosopher",name:"哲学者",  icon:"🔭",   filter:"存在の意味を問う。なぜ発信したのかを考える。", allowed:["decode","silence","respond","ignore","welcome"],     forbidden:["destroy","warn","mimic"],          forbiddenReason:"軽率な行動は存在への冒涜になる" },
+  { id:"doctor",     name:"医師",    icon:"🩺",   filter:"生命の観点で読む。苦しみか、健康の証か。", allowed:["respond","welcome","decode","silence","warn"],         forbidden:["destroy","mimic","ignore"],        forbiddenReason:"生命の可能性を遮断・無視することはできない" },
 ];
 
 // ===== SIGNAL CARD POOL =====
@@ -391,7 +391,7 @@ function RoleSelectScreen({selectedRole,setSelectedRole,onStart}){
   return (
     <div style={{...s.card,animation:"fadeIn .6s ease"}}>
       <h2 style={s.heading}>役割を選ぶ</h2>
-      <p style={s.body}>あなたはどの立場から、この信号と向き合いますか。</p>
+      <p style={{...s.body,marginBottom:16}}>あなたはどの立場から、この信号と向き合いますか。</p>
       <div style={s.roleSelectGrid}>
         {ROLES.map(r=>{
           const selected = selectedRole===r.id;
@@ -403,7 +403,6 @@ function RoleSelectScreen({selectedRole,setSelectedRole,onStart}){
               <div style={{flex:1}}>
                 <span style={s.roleSelectName}>{r.name}</span>
                 <span style={selected?s.roleSelectFilterActive:s.roleSelectFilter}>{r.filter}</span>
-                <span style={s.roleSelectForbidden}>選択不可：{r.forbiddenReason}</span>
               </div>
               {selected&&<span style={s.roleCheck}>✓</span>}
             </button>
@@ -741,14 +740,14 @@ const s = {
   rankRevealBtn:{width:"100%",padding:"14px",background:"rgba(167,139,250,.12)",border:"1px solid rgba(167,139,250,.45)",borderRadius:10,color:"#a78bfa",fontSize:15,letterSpacing:".05em",cursor:"pointer",marginTop:8},
   secondaryBtn:{width:"100%",padding:"12px",background:"transparent",border:"1px solid rgba(125,211,252,.25)",borderRadius:10,color:"#b8c8da",fontSize:14,cursor:"pointer",marginTop:12},
   roundBadge:{fontSize:11,letterSpacing:".15em",color:"#b8c8da",textTransform:"uppercase",marginBottom:12},
-  roleSelectGrid:{display:"flex",flexDirection:"column",gap:8,marginBottom:24},
-  roleSelectCard:{display:"flex",alignItems:"flex-start",gap:12,padding:"12px 16px",borderRadius:10,cursor:"pointer",textAlign:"left",background:"rgba(255,255,255,.03)",border:"1px solid rgba(125,211,252,.12)",position:"relative"},
-  roleSelectCardActive:{display:"flex",alignItems:"flex-start",gap:12,padding:"12px 16px",borderRadius:10,cursor:"pointer",textAlign:"left",background:"rgba(14,165,233,.12)",border:"1px solid rgba(125,211,252,.55)",position:"relative"},
-  roleSelectCardDisabled:{display:"flex",alignItems:"flex-start",gap:12,padding:"12px 16px",borderRadius:10,cursor:"not-allowed",textAlign:"left",background:"rgba(255,255,255,.01)",border:"1px solid rgba(125,211,252,.05)",position:"relative",opacity:.35},
-  roleSelectIcon:{fontSize:22,flexShrink:0,marginTop:2},
-  roleSelectName:{color:"#e8f0f8",fontSize:15,fontWeight:600,display:"block",marginBottom:3},
-  roleSelectFilter:{color:"#b8c8da",fontSize:13,lineHeight:1.6,display:"block",marginBottom:4,textWrap:"pretty"},
-  roleSelectFilterActive:{color:"#dde6f0",fontSize:13,lineHeight:1.6,display:"block",marginBottom:4,textWrap:"pretty"},
+  roleSelectGrid:{display:"flex",flexDirection:"column",gap:6,marginBottom:20},
+  roleSelectCard:{display:"flex",alignItems:"center",gap:12,padding:"10px 14px",borderRadius:10,cursor:"pointer",textAlign:"left",background:"rgba(255,255,255,.03)",border:"1px solid rgba(125,211,252,.12)",position:"relative"},
+  roleSelectCardActive:{display:"flex",alignItems:"center",gap:12,padding:"10px 14px",borderRadius:10,cursor:"pointer",textAlign:"left",background:"rgba(14,165,233,.12)",border:"1px solid rgba(125,211,252,.55)",position:"relative"},
+  roleSelectCardDisabled:{display:"flex",alignItems:"center",gap:12,padding:"10px 14px",borderRadius:10,cursor:"not-allowed",textAlign:"left",background:"rgba(255,255,255,.01)",border:"1px solid rgba(125,211,252,.05)",position:"relative",opacity:.35},
+  roleSelectIcon:{fontSize:20,flexShrink:0},
+  roleSelectName:{color:"#e8f0f8",fontSize:14,fontWeight:600,display:"block",marginBottom:1},
+  roleSelectFilter:{color:"#b8c8da",fontSize:12,lineHeight:1.5,display:"block",textWrap:"pretty"},
+  roleSelectFilterActive:{color:"#dde6f0",fontSize:12,lineHeight:1.5,display:"block",textWrap:"pretty"},
   roleSelectForbidden:{color:"#8899aa",fontSize:11,display:"block",fontStyle:"italic"},
   roleCheck:{position:"absolute",top:12,right:14,color:"#34d399",fontSize:15,fontWeight:700},
   signalList:{display:"flex",flexDirection:"column",gap:12,marginBottom:24},
