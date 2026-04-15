@@ -569,12 +569,12 @@ function IntroScreen({onNext}){
   const [revealed, setRevealed] = useState(false);
   return (
     <div
-      style={{...s.card,paddingTop:48,paddingBottom:52,cursor:"pointer"}}
+      style={{...s.card,paddingTop:100,paddingBottom:100,cursor:"pointer"}}
       onClick={()=>{ if(!revealed) setRevealed(true); }}
     >
       <div style={{animation:"fadeIn 1.2s ease"}}>
-        <div style={s.signalSymbol}>◈</div>
-        <h1 style={s.title}>SIGNAL</h1>
+        <div style={{...s.signalSymbol,marginTop:40,marginBottom:48}}>◈</div>
+        <h1 style={{...s.title,margin:"0 0 60px"}}>SIGNAL</h1>
       </div>
 
       <div style={{
