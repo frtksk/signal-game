@@ -570,7 +570,7 @@ function IntroScreen({onNext}){
   return (
     <div style={{...s.card,paddingTop:64,paddingBottom:52}} onClick={()=>setRevealed(true)}>
       <div style={{textAlign:"center",animation:"fadeIn 2s ease",marginBottom:40}}>
-        <div style={{...s.signalSymbol,marginBottom:20,marginTop:0}}>◈</div>
+        <div style={{...s.signalSymbol,marginBottom:32,marginTop:0}}>◈</div>
         <h1 style={{...s.title,margin:0}}>SIGNAL</h1>
       </div>
       <div style={{
