@@ -25,26 +25,26 @@ const ROLES = [
 
 // ===== SIGNAL CARD POOL =====
 const SIGNAL_CARD_POOL = [
-  { symbol:"◈",  title:"反復する幾何学",   desc:"同じ図形が螺旋状に縮小しながら中心へ消えていく。終端に何かがある。送ってきた者は、まだそこにいるのだろうか。" },
-  { symbol:"∿",  title:"波形の変容",       desc:"規則的な波が一度だけ乱れ、また規則に戻る。その乱れた部分だけが、わずかに温かい。" },
-  { symbol:"⊕",  title:"重なる円",         desc:"無数の円が重なり合い、交差点だけが異なる色を持つ。数えると素数になる。数えるほど、意味から遠ざかる気がする。" },
-  { symbol:"⟁",  title:"方向のない矢印",   desc:"矢印のような形だが、すべての端が尖っている。どこにも向いていない。あるいは、すべてに向いている。" },
-  { symbol:"⌘",  title:"接続の記号",       desc:"四方向に均等に伸びる線。その先端がそれぞれ異なるリズムで点滅している。何かが近づいている——あるいは、こちらが近づかされている。" },
-  { symbol:"◯",  title:"完全な円",         desc:"完璧な真円がただ一つ。内側は空白。外側も空白。止まっているのか、動きが遅すぎて見えないだけなのか。" },
-  { symbol:"∞",  title:"終わらない数列",   desc:"数列が送られてきたが、計算するとどこまでも収束しない。これは問いかけか。それとも、答えか。" },
-  { symbol:"△▽", title:"鏡像の三角形",     desc:"上向きと下向きの三角形が重なる。重なった部分だけが振動している。対称に見えるが、片方だけが微かに震えている。" },
-  { symbol:"░",  title:"ノイズの中の輪郭", desc:"ランダムなパターンの中に、人間に似た輪郭が浮かび上がる瞬間がある。こちらが読んでいることを、彼らは知っているのかもしれない。" },
-  { symbol:"⊗",  title:"消去の印",         desc:"×印に見えるが、線が交差する前に止まっている。触れずに、ただ近づいている。解読できなくても、受け取ったという事実は残る。" },
-  { symbol:"⟡",  title:"六角の残像",       desc:"六つの頂点を持つ形が、少しずつ回転している。一周するたびに、一頂点だけが消える。最後に何が残るのか。" },
-  { symbol:"⌬",  title:"不完全な三角形",   desc:"三辺のうち一辺だけが描かれていない。閉じることを拒んでいるのか、閉じる方法を知らないのか。" },
-  { symbol:"⍟",  title:"星の解体",         desc:"星形の図形が内側から崩れていく。崩れた破片は消えずに漂っている。一度だけ光った。それ以来、何も変わっていないように見える。" },
-  { symbol:"◉",  title:"中心と外縁",       desc:"同心円の中心だけが、他と異なる密度を持つ。中心に向かうほど、静かになる。沈黙が濃くなる。" },
-  { symbol:"⊛",  title:"重ねられた星",     desc:"複数の星形が重なり合い、どれが最初の形か判別できない。始まりと終わりが区別できない。あるいは、どちらも最初から存在しないのかもしれない。" },
-  { symbol:"⋈",  title:"交差する弧",       desc:"二つの弧が交差するが、交点では互いをすり抜けている。形は読めるが、意図が読めない——意図があるとすれば、の話だが。" },
-  { symbol:"⌀",  title:"直径の記号",       desc:"円を水平に貫く線。それ以上でも以下でもない。だが、その線がなければ円は円として成立しなかった。" },
-  { symbol:"⊞",  title:"分割された正方形", desc:"四等分された正方形。各区画に異なる密度のノイズが満ちている。誰かが同じものを見て、同じ問いを持ったことがあるはずだ。" },
-  { symbol:"⟐",  title:"非対称な菱形",     desc:"菱形に見えるが、左右の角度が微妙に異なる。意図的な誤差か、それとも彼らの空間では、これが完璧な菱形なのか。" },
-  { symbol:"⊘",  title:"横断された円",     desc:"円の中を斜めに線が走っている。禁止の記号に似ているが、線の角度が人間の知る記号とは違う。美しいと思った。それが何を意味するのかはまだわからない。" },
+  { symbol:"◈",  title:"反復する幾何学",   desc:"同じ図形が螺旋状に縮小し、中心へ消えていく。終端に何かがある。" },
+  { symbol:"∿",  title:"波形の変容",       desc:"規則的な波が一度だけ乱れ、また規則に戻る。乱れた部分だけが温かい。" },
+  { symbol:"⊕",  title:"重なる円",         desc:"交差点だけが異なる色を持つ。数えると素数になる。" },
+  { symbol:"⟁",  title:"方向のない矢印",   desc:"すべての端が尖っている。どこにも、あるいはすべてに向いている。" },
+  { symbol:"⌘",  title:"接続の記号",       desc:"先端がそれぞれ異なるリズムで点滅している。何かが近づいている。" },
+  { symbol:"◯",  title:"完全な円",         desc:"完璧な真円がただ一つ。内側も外側も空白。ただ存在している。" },
+  { symbol:"∞",  title:"終わらない数列",   desc:"計算するとどこまでも収束しない。問いかけか、それとも答えか。" },
+  { symbol:"△▽", title:"鏡像の三角形",     desc:"重なった部分だけが振動している。片方だけが微かに震えている。" },
+  { symbol:"░",  title:"ノイズの中の輪郭", desc:"人間に似た輪郭が浮かび上がる瞬間がある。こちらが読まれているのかもしれない。" },
+  { symbol:"⊗",  title:"消去の印",         desc:"線が交差する前に止まっている。触れずに、ただ近づいている。" },
+  { symbol:"⟡",  title:"六角の残像",       desc:"一周するたびに一頂点だけが消える。最後に何が残るのか。" },
+  { symbol:"⌬",  title:"不完全な三角形",   desc:"一辺だけが描かれていない。閉じることを拒んでいる。" },
+  { symbol:"⍟",  title:"星の解体",         desc:"内側から崩れていく。破片は消えずに漂っている。" },
+  { symbol:"◉",  title:"中心と外縁",       desc:"中心だけが異なる密度を持つ。近づくほど、沈黙が濃くなる。" },
+  { symbol:"⊛",  title:"重ねられた星",     desc:"どれが最初の形か判別できない。始まりも終わりも区別できない。" },
+  { symbol:"⋈",  title:"交差する弧",       desc:"交点では互いをすり抜けている。形は読めるが、意図が読めない。" },
+  { symbol:"⌀",  title:"直径の記号",       desc:"円を水平に貫く線。その線がなければ円は成立しなかった。" },
+  { symbol:"⊞",  title:"分割された正方形", desc:"各区画に異なる密度のノイズが満ちている。誰かが同じものを見たはずだ。" },
+  { symbol:"⟐",  title:"非対称な菱形",     desc:"左右の角度が微妙に異なる。彼らの空間では、これが完璧なのかもしれない。" },
+  { symbol:"⊘",  title:"横断された円",     desc:"人間の知る記号とは角度が違う。美しいと思った。" },
 ];
 
 // ===== ALIEN REACTIONS =====
@@ -99,9 +99,39 @@ const FINAL_DECISIONS = [
 
 // ===== ROUND NARRATIVES =====
 const ROUND_NARRATIVES = [
-  ["受信から72時間が経った。世界はまだ知らない。あなたたちだけが、この静寂の重さを知っている。","信号は繰り返し届く。同じパターン。同じ間隔。まるで、気づかれるのを静かに待っているかのように。","観測室の窓の外、夜明け前の空は異様なほど澄んでいた。こういう夜に、歴史は動く。"],
-  ["解析が進むほど、わからなくなる。これは知性のパターンか、それとも宇宙の偶然が作り出した幻か。","二度目の受信。前回と微妙に違う。まるで、こちらの沈黙に対して何かを調整したかのように。","外では誰かが気づき始めている。時間がない。あなたたちは今、人類の代わりに考えなければならない。"],
-  ["これが最後の信号だ。この決断は、記録に残る。あるいは、誰にも知られないまま終わるかもしれない。","信号の間隔が短くなっている。何かが変わろうとしている。あなたたちの応答が、その変化を決める。","この部屋で下された決断が、何千年後かに語られることになるかもしれない。あるいは、永遠に秘密のまま消えるか。"],
+  // Round 1 — 最初の受信、静寂と驚き
+  [
+    "受信から72時間が経った。世界はまだ知らない。あなただけが、この静寂の重さを知っている。",
+    "信号は繰り返し届く。同じパターン。同じ間隔。まるで、気づかれるのを静かに待っているかのように。",
+    "観測室の窓の外、夜明け前の空は異様なほど澄んでいた。こういう夜に、歴史は動く。",
+    "誰かが宇宙の向こうから、こちらを見ている。そう感じた瞬間があった。気のせいだと思いたかった。",
+    "信号は美しかった。それが最初の問題だった。危険なものは、もっと醜いはずだと思っていたから。",
+    "装置が記録を始めたのは、あなたが眠れない夜だった。偶然か、それとも呼ばれたのか。",
+    "周波数を合わせた瞬間、部屋の空気が変わった。温度ではない。何か別のものが、変わった。",
+    "最初は雑音だと思った。しかし雑音に、素数は含まれない。",
+  ],
+  // Round 2 — 深まる謎、選択の重さ
+  [
+    "解析が進むほど、わからなくなる。これは知性のパターンか、それとも宇宙の偶然が作り出した幻か。",
+    "二度目の受信。前回と微妙に違う。まるで、こちらの行動に対して何かを調整したかのように。",
+    "外では誰かが気づき始めている。時間がない。あなたは今、人類の代わりに考えなければならない。",
+    "信号を解読しようとするたびに、信号の方が変化する。追いかけているのか、追われているのか。",
+    "眠れない夜が続いている。夢の中でも、あの記号が浮かんでくる。意味を探すことをやめられない。",
+    "この信号を受け取ったことを、誰かに話すべきだろうか。話せば、もう後戻りはできない。",
+    "二回目の信号は、一回目より長かった。まるで、こちらが聞いていることを確認したかのように。",
+    "宇宙の広さを考えると、この信号が届いたこと自体が奇跡だ。あるいは、必然だったのか。",
+  ],
+  // Round 3 — 最後の受信、決断の瞬間
+  [
+    "これが最後の信号だ。この決断は、記録に残る。あるいは、誰にも知られないまま終わるかもしれない。",
+    "信号の間隔が短くなっている。何かが変わろうとしている。あなたの選択が、その変化を決める。",
+    "この場所で下された決断が、何千年後かに語られることになるかもしれない。あるいは、永遠に秘密のまま消えるか。",
+    "三度目の受信。もはや偶然ではない。彼らはあなたを見つけた。あなたは彼らを見つけた。",
+    "時間がない、という感覚がある。根拠はない。ただ、これが最後の機会だという確信がある。",
+    "ここまで来て、引き返すことはできない。できるとしても、あなたはしないだろう。",
+    "信号が届くたびに、自分が少しずつ変わっていく気がした。この選択の後、あなたは元に戻れるか。",
+    "答えを出す時が来た。正解はわからない。でも、選ばないことも、ひとつの選択だ。",
+  ],
 ];
 
 // ===== REVELATIONS =====
@@ -224,6 +254,7 @@ export default function SignalGame() {
   const [decisions, setDecisions]               = useState([]);
   const [currentDecision, setCurrentDecision]   = useState(null);
   const [alienReaction, setAlienReaction]       = useState(null);
+  const [lastDecision, setLastDecision]         = useState(null);
   const [finalDecision, setFinalDecision]       = useState(null);
   const [revelation, setRevelation]             = useState(null);
   const [rankResult, setRankResult]             = useState(null);
@@ -249,6 +280,7 @@ export default function SignalGame() {
     const newDecision = { round, role, decisionId: currentDecision };
     const updated = [...decisions, newDecision];
     setDecisions(updated);
+    setLastDecision(currentDecision);
     setAlienReaction(getAlienReaction([newDecision]));
     setPhase(PHASE.ALIEN);
     if(round<totalRounds){
@@ -285,7 +317,7 @@ export default function SignalGame() {
         {phase===PHASE.ROLE_SELECT && <RoleSelectScreen selectedRole={selectedRole} setSelectedRole={setSelectedRole} onStart={startGame} />}
         {phase===PHASE.SIGNAL      && <SignalScreen signals={signalSet} round={round} totalRounds={totalRounds} narrative={narrative} onNext={()=>{setCurrentDecision(null);setPhase(PHASE.DECIDE);}} />}
         {phase===PHASE.DECIDE      && <DecideScreen role={role} currentDecision={currentDecision} onSelect={setCurrentDecision} onSubmit={submitRound} round={round} totalRounds={totalRounds} />}
-        {phase===PHASE.ALIEN       && <AlienReactionScreen reaction={alienReaction} round={round} totalRounds={totalRounds} onNext={proceedFromAlien} />}
+        {phase===PHASE.ALIEN       && <AlienReactionScreen reaction={alienReaction} round={round} totalRounds={totalRounds} onNext={proceedFromAlien} lastDecision={lastDecision} />}
         {phase===PHASE.FINAL       && <FinalDecisionScreen decisions={decisions} overallStance={overallStance} finalDecision={finalDecision} setFinalDecision={setFinalDecision} onSubmit={submitFinal} />}
         {phase===PHASE.RESULT      && <ResultScreen decisions={decisions} finalDecision={finalDecision} onReveal={openRevelation} />}
         {phase===PHASE.REVELATION  && <RevelationScreen revelation={revelation} rankResult={rankResult} onRestart={()=>setPhase(PHASE.INTRO)} />}
@@ -340,16 +372,16 @@ function StarField(){
           100%{transform:translate(-50%,-50%) scale(3);opacity:0}
         }
         @keyframes iconBreath{
-          0%,100%{opacity:.65;filter:drop-shadow(0 0 3px rgba(56,189,248,.2))}
-          50%{opacity:1;filter:drop-shadow(0 0 14px rgba(56,189,248,.9))}
+          0%,100%{opacity:.65;filter:drop-shadow(0 0 3px rgba(251,191,36,.2))}
+          50%{opacity:1;filter:drop-shadow(0 0 14px rgba(251,191,36,.9))}
         }
         @keyframes iconRipple{
           0%{transform:scale(1);opacity:.5}
           100%{transform:scale(2.4);opacity:0}
         }
         @keyframes titleGlow{
-          0%,100%{color:#7dd3fc;text-shadow:none}
-          50%{color:#bae6fd;text-shadow:0 0 8px rgba(125,211,252,.5)}
+          0%,100%{color:#fbbf24;text-shadow:none}
+          50%{color:#fde68a;text-shadow:0 0 8px rgba(251,191,36,.6)}
         }
         @keyframes lineBreath{
           0%,100%{opacity:.15;transform:scaleY(1)}
@@ -460,7 +492,7 @@ function SignalScreen({signals,round,totalRounds,narrative,onNext}){
             position:"absolute",
             width:180,height:180,
             borderRadius:"50%",
-            border:`1px solid rgba(125,211,252,${.15-i*.04})`,
+            border:`1px solid rgba(251,191,36,${.12-i*.03})`,
             top:"50%",left:"50%",
             transform:"translate(-50%,-50%)",
             animation:`rippleExpand 4.2s ease-out ${delay}s infinite`,
@@ -484,7 +516,7 @@ function SignalScreen({signals,round,totalRounds,narrative,onNext}){
               <div style={{position:"relative",flexShrink:0,width:40,display:"flex",alignItems:"center",justifyContent:"center"}}>
                 <span style={{
                   fontSize:26,
-                  color:"#38bdf8",
+                  color:"#fbbf24",
                   display:"block",
                   position:"relative",
                   zIndex:1,
@@ -495,7 +527,7 @@ function SignalScreen({signals,round,totalRounds,narrative,onNext}){
                   position:"absolute",
                   width:32,height:32,
                   borderRadius:"50%",
-                  border:"1px solid rgba(56,189,248,.4)",
+                  border:"1px solid rgba(251,191,36,.5)",
                   animation:`iconRipple ${2.8+i*.4}s ease-out ${i*.6+.3}s infinite`,
                 }} />
               </div>
@@ -511,7 +543,7 @@ function SignalScreen({signals,round,totalRounds,narrative,onNext}){
               {/* カード右端の縦ライン（呼吸） */}
               <div style={{
                 position:"absolute",right:0,top:0,bottom:0,width:2,borderRadius:"0 10px 10px 0",
-                background:`rgba(125,211,252,.15)`,
+                background:`rgba(251,191,36,.2)`,
                 animation:`lineBreath ${3.5+i*.6}s ease-in-out ${i*.4}s infinite`,
               }} />
             </div>
@@ -530,7 +562,7 @@ function DecideScreen({role,currentDecision,onSelect,onSubmit,round,totalRounds}
   return (
     <div style={{...s.card,animation:"fadeIn .6s ease"}}>
       <p style={s.roundBadge}>ROUND {round} / {totalRounds} — 決断</p>
-      <h2 style={s.heading}>応答を選ぶ</h2>
+      <h2 style={s.heading}>あなたの選択</h2>
       {role&&roleData&&(
         <div>
           <p style={s.filterNote}>{role.icon} {role.name}として：「{roleData.filter}」</p>
@@ -558,13 +590,23 @@ function DecideScreen({role,currentDecision,onSelect,onSubmit,round,totalRounds}
 }
 
 // ===== ALIEN REACTION =====
-function AlienReactionScreen({reaction,round,totalRounds,onNext}){
+function AlienReactionScreen({reaction,round,totalRounds,onNext,lastDecision}){
   if(!reaction) return null;
   const isLast = round>=totalRounds;
+  const dec = ALL_DECISIONS.find(d=>d.id===lastDecision);
   return (
     <div style={{...s.card,animation:"fadeIn .6s ease"}}>
       <p style={s.roundBadge}>ROUND {round} / {totalRounds} — 応答</p>
-      <h2 style={s.heading}>彼らが反応した</h2>
+      <h2 style={s.heading}>彼らの反応</h2>
+
+      {/* 自分の選択 */}
+      {dec&&(
+        <div style={s.myChoiceBox}>
+          <span style={s.myChoiceLabel}>あなたの選択</span>
+          <span style={s.myChoiceValue}>{dec.label}</span>
+        </div>
+      )}
+
       <div style={{...s.alienBox, borderColor:`${reaction.color}44`}}>
         <div style={{...s.alienSymbolRow}}>
           <span style={{...s.alienSymbol, color:reaction.color}}>{reaction.symbol}</span>
@@ -727,7 +769,7 @@ const s = {
   subtitle:{textAlign:"center",color:"#c8d8e8",fontSize:14,lineHeight:2.1,margin:"0 0 24px",textWrap:"balance",letterSpacing:".04em"},
   heading:{fontSize:22,color:"#7dd3fc",margin:"0 0 12px",fontWeight:400,letterSpacing:".05em",textWrap:"balance"},
   body:{color:"#dde6f0",fontSize:14,lineHeight:2,margin:"0 0 20px",textWrap:"pretty"},
-  narrative:{color:"#c8d8e8",fontSize:14,lineHeight:2,margin:"0 0 20px",fontStyle:"italic",padding:"12px 16px",borderLeft:"2px solid rgba(125,211,252,.25)",background:"rgba(14,165,233,.04)",borderRadius:"0 8px 8px 0",textWrap:"pretty"},
+  narrative:{color:"#e8f0f8",fontSize:14,lineHeight:2,margin:"0 0 20px",fontStyle:"italic",padding:"12px 16px",borderLeft:"2px solid rgba(251,191,36,.4)",background:"rgba(251,191,36,.04)",borderRadius:"0 8px 8px 0",textWrap:"pretty"},
   badge:{marginLeft:10,fontSize:12,padding:"2px 10px",background:"rgba(125,211,252,.12)",border:"1px solid rgba(125,211,252,.3)",borderRadius:20,color:"#7dd3fc"},
   label:{color:"#7dd3fc",fontSize:12,letterSpacing:".1em",textTransform:"uppercase",marginBottom:10},
   section:{marginBottom:24},
@@ -751,14 +793,14 @@ const s = {
   roleSelectForbidden:{color:"#8899aa",fontSize:11,display:"block",fontStyle:"italic"},
   roleCheck:{position:"absolute",top:12,right:14,color:"#34d399",fontSize:15,fontWeight:700},
   signalList:{display:"flex",flexDirection:"column",gap:12,marginBottom:24},
-  signalCard:{display:"flex",alignItems:"flex-start",gap:16,background:"rgba(14,165,233,.06)",border:"1px solid rgba(125,211,252,.15)",borderRadius:10,padding:"14px 16px",position:"relative",overflow:"hidden"},
-  signalTitle:{color:"#7dd3fc",fontSize:14,margin:"0 0 6px",letterSpacing:".03em"},
-  signalDesc:{color:"#c8d8e8",fontSize:13,margin:0,lineHeight:1.8},
+  signalCard:{display:"flex",alignItems:"flex-start",gap:16,background:"rgba(251,191,36,.06)",border:"1px solid rgba(251,191,36,.2)",borderRadius:10,padding:"14px 16px",position:"relative",overflow:"hidden"},
+  signalTitle:{color:"#fbbf24",fontSize:14,margin:"0 0 6px",letterSpacing:".03em"},
+  signalDesc:{color:"#e8f0f8",fontSize:13,margin:0,lineHeight:1.8},
   tabRow:{display:"flex",gap:8,marginBottom:16,flexWrap:"wrap"},
   tab:{padding:"8px 14px",border:"1px solid rgba(125,211,252,.18)",borderRadius:8,background:"transparent",color:"#b8c8da",fontSize:13,cursor:"pointer"},
   tabActive:{padding:"8px 14px",border:"1px solid rgba(125,211,252,.55)",borderRadius:8,background:"rgba(125,211,252,.12)",color:"#7dd3fc",fontSize:13,cursor:"pointer"},
   checkMark:{color:"#34d399",fontSize:11},
-  filterNote:{color:"#c8d8e8",fontSize:13,fontStyle:"italic",marginBottom:14,lineHeight:1.7,padding:"10px 14px",background:"rgba(255,255,255,.03)",borderRadius:8,borderLeft:"2px solid rgba(125,211,252,.3)"},
+  filterNote:{color:"#dde6f0",fontSize:13,fontStyle:"italic",marginBottom:14,lineHeight:1.7,padding:"10px 14px",background:"rgba(255,255,255,.03)",borderRadius:8,borderLeft:"2px solid rgba(125,211,252,.3)"},
   decisionGrid:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:20},
   decisionBtn:{padding:"12px 10px",border:"1px solid rgba(125,211,252,.15)",borderRadius:8,background:"transparent",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
   decisionBtnActive:{padding:"12px 10px",border:"1px solid rgba(125,211,252,.6)",borderRadius:8,background:"rgba(14,165,233,.14)",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
@@ -766,31 +808,34 @@ const s = {
   decisionLabel:{color:"#e8f0f8",fontWeight:600,fontSize:14},
   decisionLabelForbidden:{color:"#5a6070",fontWeight:600,fontSize:14},
   decisionDesc:{color:"#b8c8da",fontSize:12,lineHeight:1.5,textWrap:"pretty"},
+  myChoiceBox:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"10px 14px",background:"rgba(255,255,255,.04)",border:"1px solid rgba(125,211,252,.2)",borderRadius:10,marginBottom:14},
+  myChoiceLabel:{color:"#7dd3fc",fontSize:11,letterSpacing:".12em",textTransform:"uppercase"},
+  myChoiceValue:{color:"#e8f0f8",fontSize:14,fontWeight:600},
   // Alien reaction
-  alienBox:{padding:"24px 20px",background:"rgba(255,255,255,.03)",border:"2px solid",borderRadius:14,marginBottom:20},
+  alienBox:{padding:"20px",background:"rgba(255,255,255,.03)",border:"2px solid",borderRadius:14,marginBottom:20},
   alienSymbolRow:{display:"flex",alignItems:"center",justifyContent:"center",gap:12,marginBottom:12,position:"relative"},
   alienSymbol:{fontSize:32,letterSpacing:".1em",fontWeight:300},
   alienPulse:{width:8,height:8,borderRadius:"50%",animation:"pulseRing 1.5s ease-out infinite"},
   alienTitle:{fontSize:18,fontWeight:600,letterSpacing:".05em",margin:"0 0 10px",textAlign:"center",textWrap:"balance"},
-  alienDesc:{color:"#c8d8e8",fontSize:14,lineHeight:1.9,margin:"0 0 14px",textWrap:"pretty"},
-  alienHint:{color:"#dde6f0",fontSize:13,lineHeight:1.7,margin:0,padding:"10px 14px",background:"rgba(255,255,255,.03)",borderRadius:8,borderLeft:"3px solid",textWrap:"pretty"},
+  alienDesc:{color:"#dde6f0",fontSize:14,lineHeight:1.9,margin:"0 0 14px",textWrap:"pretty"},
+  alienHint:{color:"#e8f0f8",fontSize:13,lineHeight:1.7,margin:0,padding:"10px 14px",background:"rgba(255,255,255,.03)",borderRadius:8,borderLeft:"3px solid",textWrap:"pretty"},
   // Final decision
   finalHeader:{display:"flex",alignItems:"center",gap:12,marginBottom:8},
-  finalBadge:{fontSize:11,padding:"3px 10px",background:"rgba(251,191,36,.15)",border:"1px solid rgba(251,191,36,.4)",borderRadius:20,color:"#fbbf24",letterSpacing:".1em"},
+  finalBadge:{fontSize:11,padding:"3px 10px",background:"rgba(125,211,252,.1)",border:"1px solid rgba(125,211,252,.3)",borderRadius:20,color:"#7dd3fc",letterSpacing:".1em"},
   stanceBar:{display:"flex",flexDirection:"column",gap:8,marginBottom:20,padding:"14px 16px",background:"rgba(255,255,255,.03)",borderRadius:10,border:"1px solid rgba(125,211,252,.1)"},
   stanceBarItem:{display:"flex",alignItems:"center",gap:10},
-  stanceBarLabel:{fontSize:12,minWidth:64,color:"#b8c8da"},
+  stanceBarLabel:{fontSize:12,minWidth:64,color:"#dde6f0"},
   stanceBarTrack:{flex:1,height:6,background:"rgba(255,255,255,.08)",borderRadius:3,overflow:"hidden"},
   stanceBarFill:{height:"100%",borderRadius:3,transition:"width .5s ease"},
-  stanceBarCount:{fontSize:12,color:"#b8c8da",minWidth:16,textAlign:"right"},
+  stanceBarCount:{fontSize:12,color:"#dde6f0",minWidth:16,textAlign:"right"},
   finalDecisionList:{display:"flex",flexDirection:"column",gap:8,marginBottom:20},
   finalBtn:{padding:"14px 16px",border:"1px solid rgba(125,211,252,.15)",borderRadius:10,background:"transparent",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
   finalBtnAligned:{padding:"14px 16px",border:"1px solid rgba(125,211,252,.3)",borderRadius:10,background:"rgba(14,165,233,.06)",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
-  finalBtnActive:{padding:"14px 16px",border:"1px solid rgba(251,191,36,.6)",borderRadius:10,background:"rgba(251,191,36,.1)",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
+  finalBtnActive:{padding:"14px 16px",border:"1px solid rgba(125,211,252,.7)",borderRadius:10,background:"rgba(14,165,233,.16)",cursor:"pointer",textAlign:"left",display:"flex",flexDirection:"column",gap:5},
   finalBtnTop:{display:"flex",alignItems:"center",gap:8},
   finalBtnLabel:{color:"#e8f0f8",fontWeight:600,fontSize:14},
-  finalBtnBadge:{fontSize:10,padding:"2px 8px",background:"rgba(52,211,153,.15)",border:"1px solid rgba(52,211,153,.4)",borderRadius:10,color:"#34d399"},
-  finalBtnDesc:{color:"#b8c8da",fontSize:12,lineHeight:1.5,textWrap:"pretty"},
+  finalBtnBadge:{fontSize:10,padding:"2px 8px",background:"rgba(125,211,252,.12)",border:"1px solid rgba(125,211,252,.3)",borderRadius:10,color:"#7dd3fc"},
+  finalBtnDesc:{color:"#dde6f0",fontSize:12,lineHeight:1.5,textWrap:"pretty"},
   // Timeline
   timeline:{display:"flex",flexDirection:"column",gap:10,marginBottom:20},
   timelineRound:{padding:"12px 16px",background:"rgba(255,255,255,.03)",border:"1px solid rgba(125,211,252,.1)",borderRadius:10},
