@@ -19,7 +19,7 @@ const ROLES = [
   { id:"poet",       name:"詩人",    icon:"🪶",   filter:"感情と美しさで読む。意志を言葉の裏に感じる。", allowed:["respond","decode","welcome","silence","mimic"],      forbidden:["destroy","warn","ignore"],         forbiddenReason:"美しい可能性を封じることはできない" },
   { id:"soldier",    name:"軍人",    icon:"⚔️",   filter:"敵か味方か。脅威の兆候を探す。",             allowed:["silence","warn","destroy","ignore","respond"],         forbidden:["welcome","decode","mimic"],        forbiddenReason:"未確認の脅威に友好的な態度は取れない" },
   { id:"child",      name:"子ども",  icon:"🌱",   filter:"純粋に問う。大人が見落とすものを見る。",     allowed:["respond","welcome","decode","mimic","ignore"],         forbidden:["destroy","warn","silence"],        forbiddenReason:"怖がって隠したり壊したりするのは嫌だ" },
-  { id:"philosopher",name:"哲学者",  icon:"🔭",   filter:"存在の意味を問う。なぜ発信されたのかを考える。", allowed:["decode","silence","respond","ignore","welcome"],   forbidden:["destroy","warn","mimic"],          forbiddenReason:"軽率な行動は存在への冒涜になる" },
+  { id:"philosopher",name:"哲学者",  icon:"🔭",   filter:"存在の意味を問う。なぜ発信されたのか。",     allowed:["decode","silence","respond","ignore","welcome"],   forbidden:["destroy","warn","mimic"],          forbiddenReason:"軽率な行動は存在への冒涜になる" },
   { id:"doctor",     name:"医師",    icon:"🩺",   filter:"生命の観点で読む。苦しみか健康の証か。",     allowed:["respond","welcome","decode","silence","warn"],         forbidden:["destroy","mimic","ignore"],        forbiddenReason:"生命の可能性を遮断・無視することはできない" },
 ];
 
