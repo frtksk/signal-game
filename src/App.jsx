@@ -558,7 +558,7 @@ function StarField(){
           100%{filter:drop-shadow(0 0 2px rgba(125,211,252,.12));opacity:.5;transform:translateY(0) scale(1) rotate(0deg)}
         }
         button:active{transform:scale(.97)}
-        button:active{background-color:rgba(125,211,252,.25) !important;transition:none}
+        button:active{background-color:rgba(125,211,252,.15);transition:none}
       `}</style>
     </div>
   );
