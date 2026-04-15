@@ -371,14 +371,15 @@ function IntroScreen({onNext}){
     <div style={{...s.card,animation:"fadeIn .8s ease"}}>
       <div style={s.signalSymbol}>◈</div>
       <h1 style={s.title}>SIGNAL</h1>
-      <p style={s.subtitle}>
-        宇宙から信号が届いた。<br/>
-        解読できない。<br/>
-        でも、何かを求めている。
+      <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
+        <span>宇宙から信号が届いた。</span>
+        <span>解読できない。</span>
+        <span>でも、何かを求めている。</span>
       </p>
-      <p style={{...s.body,textAlign:"center",color:"#b8c8da",fontSize:13,letterSpacing:".02em"}}>
-        あなたは人類の代表として、<br/>
-        この信号にどう応答するかを決めなければならない。
+      <p style={{...s.body,textAlign:"center",color:"#b8c8da",fontSize:13,letterSpacing:".02em",display:"flex",flexDirection:"column",gap:"0px"}}>
+        <span>あなたは人類の代表として、</span>
+        <span>この信号にどう応答するかを</span>
+        <span>決めなければならない。</span>
       </p>
       <button style={s.primaryBtn} onClick={onNext}>役割を選ぶ →</button>
     </div>
