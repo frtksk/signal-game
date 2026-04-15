@@ -371,8 +371,15 @@ function IntroScreen({onNext}){
     <div style={{...s.card,animation:"fadeIn .8s ease"}}>
       <div style={s.signalSymbol}>◈</div>
       <h1 style={s.title}>SIGNAL</h1>
-      <p style={s.subtitle}>宇宙から信号が届いた。<br/>解読できない。でも、何かを求めている。</p>
-      <p style={s.body}>あなたは人類の代表として、この信号にどう応答するかを決めなければならない。</p>
+      <p style={s.subtitle}>
+        宇宙から信号が届いた。<br/>
+        解読できない。<br/>
+        でも、何かを求めている。
+      </p>
+      <p style={{...s.body,textAlign:"center",color:"#b8c8da",fontSize:13,letterSpacing:".02em"}}>
+        あなたは人類の代表として、<br/>
+        この信号にどう応答するかを決めなければならない。
+      </p>
       <button style={s.primaryBtn} onClick={onNext}>役割を選ぶ →</button>
     </div>
   );
@@ -715,11 +722,11 @@ const s = {
   starField:{position:"fixed",inset:0,pointerEvents:"none",zIndex:0},
   container:{position:"relative",zIndex:1,width:"100%",maxWidth:580},
   card:{background:"rgba(8,20,50,.88)",border:"1px solid rgba(125,211,252,.18)",borderRadius:16,padding:"36px 32px",backdropFilter:"blur(12px)",boxShadow:"0 0 60px rgba(14,165,233,.08),0 4px 32px rgba(0,0,0,.5)",animation:"signalPulse 6s ease-in-out infinite"},
-  signalSymbol:{fontSize:48,textAlign:"center",marginBottom:8,animation:"symbolFloat 3s ease-in-out infinite",display:"block"},
-  title:{fontSize:42,letterSpacing:".3em",textAlign:"center",color:"#7dd3fc",margin:"0 0 8px",fontWeight:300,animation:"glow 3s ease-in-out infinite",textWrap:"balance"},
-  subtitle:{textAlign:"center",color:"#dde6f0",fontSize:15,lineHeight:1.9,margin:"0 0 20px",textWrap:"balance"},
+  signalSymbol:{fontSize:52,textAlign:"center",marginBottom:12,animation:"symbolFloat 3s ease-in-out infinite",display:"block",letterSpacing:".05em"},
+  title:{fontSize:44,letterSpacing:".45em",textAlign:"center",color:"#7dd3fc",margin:"0 0 4px",fontWeight:300,animation:"glow 3s ease-in-out infinite",textWrap:"balance",paddingLeft:".45em"},
+  subtitle:{textAlign:"center",color:"#c8d8e8",fontSize:14,lineHeight:2.1,margin:"0 0 24px",textWrap:"balance",letterSpacing:".04em"},
   heading:{fontSize:22,color:"#7dd3fc",margin:"0 0 12px",fontWeight:400,letterSpacing:".05em",textWrap:"balance"},
-  body:{color:"#dde6f0",fontSize:14,lineHeight:1.9,margin:"0 0 20px",textWrap:"pretty"},
+  body:{color:"#dde6f0",fontSize:14,lineHeight:2,margin:"0 0 20px",textWrap:"pretty"},
   narrative:{color:"#c8d8e8",fontSize:14,lineHeight:2,margin:"0 0 20px",fontStyle:"italic",padding:"12px 16px",borderLeft:"2px solid rgba(125,211,252,.25)",background:"rgba(14,165,233,.04)",borderRadius:"0 8px 8px 0",textWrap:"pretty"},
   badge:{marginLeft:10,fontSize:12,padding:"2px 10px",background:"rgba(125,211,252,.12)",border:"1px solid rgba(125,211,252,.3)",borderRadius:20,color:"#7dd3fc"},
   label:{color:"#7dd3fc",fontSize:12,letterSpacing:".1em",textTransform:"uppercase",marginBottom:10},
