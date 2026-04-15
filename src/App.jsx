@@ -568,31 +568,15 @@ function StarField(){
 function IntroScreen({onNext}){
   const [revealed, setRevealed] = useState(false);
   return (
-    <div
-      style={{...s.card,padding:"0 20px",cursor:"pointer",position:"relative",minHeight:560}}
-      onClick={()=>{ if(!revealed) setRevealed(true); }}
-    >
-      {/* 記号とタイトル */}
-      <div style={{
-        position:"absolute",
-        left:0,right:0,
-        top: revealed?"8%":"28%",
-        textAlign:"center",
-        transition:"top 1.8s cubic-bezier(.25,.1,.25,1)",
-        animation:"fadeIn 1.4s ease",
-      }}>
+    <div style={{...s.card,paddingTop:64,paddingBottom:52}} onClick={()=>setRevealed(true)}>
+      <div style={{textAlign:"center",animation:"fadeIn 2s ease",marginBottom:40}}>
         <div style={{...s.signalSymbol,marginBottom:20,marginTop:0}}>◈</div>
         <h1 style={{...s.title,margin:0}}>SIGNAL</h1>
       </div>
-
-      {/* 説明とボタン */}
       <div style={{
-        position:"absolute",
-        left:"20px",right:"20px",
-        bottom:"28px",
         opacity: revealed?1:0,
-        transform: revealed?"translateY(0)":"translateY(20px)",
-        transition:"opacity 1.2s ease .5s, transform 1.4s cubic-bezier(.25,.1,.25,1) .3s",
+        transform: revealed?"translateY(0)":"translateY(24px)",
+        transition:"opacity 2.5s ease, transform 2.5s cubic-bezier(.16,1,.3,1)",
         pointerEvents: revealed?"auto":"none",
       }}>
         <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
@@ -605,7 +589,7 @@ function IntroScreen({onNext}){
           <span>この信号にどう応答するかを</span>
           <span>決めなければならない。</span>
         </p>
-        <button style={s.primaryBtn} onClick={e=>{ e.stopPropagation(); onNext(); }}>役割を選ぶ →</button>
+        <button style={s.primaryBtn} onClick={e=>{e.stopPropagation();onNext();}}>役割を選ぶ →</button>
       </div>
     </div>
   );
