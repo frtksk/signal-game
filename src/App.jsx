@@ -566,21 +566,35 @@ function StarField(){
 
 // ===== INTRO =====
 function IntroScreen({onNext}){
+  const [revealed, setRevealed] = useState(false);
   return (
-    <div style={{...s.card,animation:"fadeIn .8s ease",paddingTop:48,paddingBottom:52}}>
-      <div style={s.signalSymbol}>◈</div>
-      <h1 style={s.title}>SIGNAL</h1>
-      <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
-        <span>宇宙から信号が届いた。</span>
-        <span>解読できない。</span>
-        <span>でも、何かを求めている。</span>
-      </p>
-      <p style={{...s.subtitle,color:"#b8c8da",letterSpacing:".02em",display:"flex",flexDirection:"column",gap:"0px",marginTop:12}}>
-        <span>あなたは人類の代表として、</span>
-        <span>この信号にどう応答するかを</span>
-        <span>決めなければならない。</span>
-      </p>
-      <button style={s.primaryBtn} onClick={onNext}>役割を選ぶ →</button>
+    <div
+      style={{...s.card,paddingTop:48,paddingBottom:52,cursor:"pointer"}}
+      onClick={()=>{ if(!revealed) setRevealed(true); }}
+    >
+      <div style={{animation:"fadeIn 1.2s ease"}}>
+        <div style={s.signalSymbol}>◈</div>
+        <h1 style={s.title}>SIGNAL</h1>
+      </div>
+
+      <div style={{
+        opacity: revealed?1:0,
+        transform: revealed?"translateY(0)":"translateY(16px)",
+        transition:"opacity 1.2s ease, transform 1.2s ease",
+        pointerEvents: revealed?"auto":"none",
+      }}>
+        <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
+          <span>宇宙から信号が届いた。</span>
+          <span>解読できない。</span>
+          <span>でも、何かを求めている。</span>
+        </p>
+        <p style={{...s.subtitle,color:"#b8c8da",letterSpacing:".02em",display:"flex",flexDirection:"column",gap:"0px",marginTop:12}}>
+          <span>あなたは人類の代表として、</span>
+          <span>この信号にどう応答するかを</span>
+          <span>決めなければならない。</span>
+        </p>
+        <button style={s.primaryBtn} onClick={e=>{ e.stopPropagation(); onNext(); }}>役割を選ぶ →</button>
+      </div>
     </div>
   );
 }
