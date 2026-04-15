@@ -578,6 +578,8 @@ function IntroScreen({onNext}){
         transform: revealed?"translateY(0)":"translateY(24px)",
         transition:"opacity 2.5s ease, transform 2.5s cubic-bezier(.16,1,.3,1)",
         pointerEvents: revealed?"auto":"none",
+        maxWidth:320,
+        margin:"0 auto",
       }}>
         <p style={{...s.subtitle,display:"flex",flexDirection:"column",gap:"0px"}}>
           <span>宇宙から信号が届いた。</span>
